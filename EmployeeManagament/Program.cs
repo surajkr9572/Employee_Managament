@@ -5,14 +5,17 @@
         static void Main(string[] args)
         {
             Random random = new Random();
-            int empAttendence = random.Next(0, 2);
+            int empAttendence = random.Next(0, 3);
             int empHours = 0;
             int empWages = 0;
             int emp_per_hours = 20;
-            
             if (empAttendence == 1)
             {
                 empHours = 8;
+            }
+            else if (empAttendence == 2)
+            {
+                empHours = 4;
             }
             else
             {
