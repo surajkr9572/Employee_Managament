@@ -9,18 +9,20 @@
             int empHours = 0;
             int empWages = 0;
             int emp_per_hours = 20;
-            if (empAttendence == 1)
+
+            switch(empAttendence)
             {
-                empHours = 8;
+                case 1:
+                    empHours = 4;
+                    break;
+                case 2:
+                    empHours = 8;
+                    break;
+                default:
+                    empHours = 0;
+                    break;
             }
-            else if (empAttendence == 2)
-            {
-                empHours = 4;
-            }
-            else
-            {
-                empHours = 0;
-            }
+            
             empWages = empHours * emp_per_hours;
             Console.WriteLine($"Employee Wages: {empWages}");
         }
